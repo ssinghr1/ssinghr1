@@ -3,25 +3,17 @@ import NgramLM
 class ImprovedNgramLM(NgramLM.NgramLM):
     """An improved version of n-gram language model with OOV handling.
     This class inherits all bahaviors from previous defined `NgramLM`.
-    Please be careful with the implementations here as you have to be consistent
-    with all interfaces.
-    
-    Note: you could override more methods provided by the base class, but you have 
-    to maintain their ability of handling the same types of inputs and outputs.
     """
 
     def __init__(self, n: int):
         super(ImprovedNgramLM, self).__init__(n=n)
            
         self.a: int = 0.2 #add-a smoothing constant
-        #self.a = .0016191 #add-a smoothing constant with lowest perplexity from testing. 
 
     @overrides
     def next_word_candidates(self, context: Tuple[str]) -> List[str]:
         """Generates a list of tokens based on the given context, which would be
         later used as candidates for the next word prediction.
-        
-        Note: in this overriden version, you should deal with the OOV words.
         
         Parameters
         ----------
@@ -42,8 +34,6 @@ class ImprovedNgramLM(NgramLM.NgramLM):
     def word_prob(self, context: Tuple[str], word: str) -> float:
         """Returns the probability of a word given a context. The context is a
         string of words, with length n-1. 
-        
-        Note: in this overriden version, you should deal with the OOV words.
         
         Parameters
         ----------

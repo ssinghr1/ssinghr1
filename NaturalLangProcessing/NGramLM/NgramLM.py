@@ -12,7 +12,7 @@ class NgramLM(object):
         
     def generate_ngrams(self, text: List[str]) -> Counter:
         """Generates all n-grams (i.e. n-1 context words) for the given text.
-        Assume n is defined at the class initialization
+        Assumes n is defined at the class initialization
 
         Parameters
         ----------
@@ -105,10 +105,6 @@ class NgramLM(object):
     def random_word(self, context: Tuple[str]) -> str:
         """Generates a random word based on the given context.
         
-        Note: 
-        Please use a random function from `random` instead of `numpy`;
-        otherwise, the autograder might not be happy.
-        
         Parameters
         ----------
         context : Tuple[str]
@@ -135,17 +131,6 @@ class NgramLM(object):
 
     def random_text(self, length: int) -> List[str]:
         """Generates random text of the specified word length excluding "~" (BOS).
-        
-        Note: 
-        - The final word of the generated text *can* be "~" (EOS), but it is not necessary.
-        - The generation should always start with "~" (BOS).
-        - Only the number of starting "~" (BOS) is excluded from the generation, any 
-        ending "~" (EOS) is still counted to the `length`. It means that you should 
-        draw a number of `length` samples.
-        
-        Note: 
-        Please use a random function from `random` instead of `numpy`;
-        otherwise, the autograder might not be happy.
         
         Parameters
         ----------

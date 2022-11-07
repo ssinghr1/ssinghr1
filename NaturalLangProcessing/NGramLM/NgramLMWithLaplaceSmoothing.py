@@ -13,8 +13,6 @@ class NgramLMWithLaplaceSmoothing(NgramLM.NgramLM):
         """Generates a list of tokens based on the given context, which would be
         later used as candidates for the next word prediction.
         
-        Note: in this overriden version, you should deal with the OOV words.
-        
         Parameters
         ----------
         context : Tuple[str]
@@ -34,8 +32,6 @@ class NgramLMWithLaplaceSmoothing(NgramLM.NgramLM):
     def word_prob(self, context: Tuple[str], word: str) -> float:
         """Returns the probability of a word given a context. The context is a
         string of words, with length n-1. 
-        
-        Note: in this overriden version, you should deal with the OOV words.
         
         Parameters
         ----------
