@@ -8,4 +8,4 @@ Email: [ssinghr1@jh.edu](mailto:ssinghr1@jh.edu) \
 Linkedin: https://www.linkedin.com/in/singh-rana/ 
 
 <br>
-<b>Note:</b> This repo is made public with projects I worked on previous to producing this github account. If you ahve any questions about how code was produced or the process involved, please reach out via the contact options listed above!
+<b>Note:</b> This repo is made public with projects I worked on previous to producing this github account. If you have any questions about how code was produced or the process involved, please reach out via the contact options listed above!
